@@ -22,6 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "~>2.14"
 
-  spec.add_dependency 'chunky_png'
-  spec.add_dependency 'imgkit', '1.4.1'
+  spec.add_runtime_dependency 'chunky_png'
+  spec.add_runtime_dependency 'imgkit', '1.4.1'
 end

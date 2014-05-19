@@ -1,10 +1,5 @@
 module Table2PNG
   IMGKit.configure do |config|
-    binary_path = ENV['HEROKU'] ?
-      'bin/wkhtmltoimage-amd64' :
-      'bin/wkhtmltoimage'
-
-    config.wkhtmltoimage = File.join(File.dirname(__FILE__), binary_path)
     config.default_options = { quality: 100, "disable-javascript" => true }
   end
 
