@@ -19,8 +19,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby                                              
-# e.g. Table2PNG table_html, max_width
-Table2PNG "<table><tr><td>HEY</td></tr></table>", 300
+# e.g. Table2PNG table_html
+Table2PNG::Converter.new("<table><tr><td>HEY</td></tr></table>").process
 ```
    
 ## Contributing

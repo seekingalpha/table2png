@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "table2png"
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ["Maiz Lulkin"]
   spec.email         = ["maiz@lulk.in"]
   spec.description   = %q{Generates a png based on an HTML table}
