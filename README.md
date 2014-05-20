@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/seekingalpha/table2png.png)](https://codeclimate.com/github/seekingalpha/table2png)
+
+[![Build Status](https://travis-ci.org/seekingalpha/table2png.svg)](https://travis-ci.org/seekingalpha/table2png)
+
 # Table2PNG
 
 A simple PNG generator based on an HTML table.
