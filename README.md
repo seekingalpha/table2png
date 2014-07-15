@@ -24,7 +24,9 @@ Or install it yourself as:
 
 ```ruby                                              
 # e.g. Table2PNG table_html
-Table2PNG::Converter.new("<table><tr><td>HEY</td></tr></table>").process
+Table2PNG::Converter.new("<table><tr><td>HEY</td></tr></table>").process // default style public/table.css
+or you can pass any style you want by
+Table2PNG::Converter.new("<table><tr><td>HEY</td></tr></table>").process ['public/style.css']
 ```
    
 ## Contributing
