@@ -23,8 +23,9 @@ module Table2PNG
 
     private
     def png
-      sources = ['article','performance_layout','performance_layout_b']
-      css_files = Synthesis::AssetPackage.sources_from_targets("stylesheets", sources)
+      #sources = ['article','performance_layout','performance_layout_b']
+      #css_files = Synthesis::AssetPackage.sources_from_targets("stylesheets", sources)
+      css_files = ['article','performance_layout','performance_layout_b']
       @png ||= ChunkyPNG::Image.from_blob png_from_table css_files
     end
 
