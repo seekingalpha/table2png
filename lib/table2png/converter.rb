@@ -1,4 +1,6 @@
 module Table2PNG
+  attr_accessor :css_files
+
   IMGKit.configure do |config|
     config.default_options = { quality: 100, "disable-javascript" => true }
   end
@@ -23,9 +25,7 @@ module Table2PNG
 
     private
     def png
-      #sources = ['article','performance_layout','performance_layout_b']
-      #css_files = Synthesis::AssetPackage.sources_from_targets("stylesheets", sources)
-      css_files = ['article','performance_layout','performance_layout_b']
+      css_files = @css_files || ['public/table.css']
       @png ||= ChunkyPNG::Image.from_blob png_from_table css_files
     end
 
@@ -36,7 +36,7 @@ module Table2PNG
       image_from_table = IMGKit.new(html)
 
       css_files.each do |file_name|
-        image_from_table.stylesheets << "#{Dir.pwd}/public/stylesheets/" + file_name + ".css"
+        image_from_table.stylesheets << "#{Dir.pwd}/" + file_name
       end
 
       @png_from_table = image_from_table.to_img(:png)
